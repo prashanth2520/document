@@ -18,7 +18,8 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         password: ${{ secrets.SSH_PASSWORD }}
-        run: touch sample.txt kevin app/document/
+        run: |
+            touch sample.txt kevin app/document/
              
         
         
