@@ -11,9 +11,9 @@ jobs:
     steps:
         - name: creating file
           run : |
-           mkdir -p application/
-           touch application/sample.txt
-           echo "File created" > application/sample.txt
+           mkdir -p /home/kevin/application/
+           touch /home/kevin/application/sample.txt
+           echo "File created" > /home/kevin/application/sample.txt
           
         - name: executing remote ssh commands using password
           uses: appleboy/ssh-action@master
