@@ -19,7 +19,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         password: ${{ secrets.SSH_PASSWORD }}
         script: 
-              sudo touch sample.txt
+               touch sample.txt
              
         
         
