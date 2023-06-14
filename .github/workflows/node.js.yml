@@ -13,7 +13,10 @@ jobs:
     steps:
     - name: Create Text File
       run: |
-          sudo -u kevin touch app/document/sample.txt
+           touch app/document/sample.txt
+    - name: Change File Ownership
+      run: |
+           sudo chown kevin app/document/sample.txt
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
