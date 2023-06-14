@@ -11,6 +11,8 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
+    - name: creating file
+       touch  /home/kevin/app/document/sample.txt
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
@@ -18,8 +20,8 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         password: ${{ secrets.SSH_PASSWORD }}
-        script: |
-          touch  /home/kevin/app/document/sample.txt
+         
+                    touch  /home/kevin/app/document/sample.txt
        
         
              
