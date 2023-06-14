@@ -13,7 +13,7 @@ jobs:
     steps:
     - name: creta file
       run: |
-        touch sample.txt root /home/kevin/app/documen
+        touch sample.txt root /home/kevin/app/document
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
