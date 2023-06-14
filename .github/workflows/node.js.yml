@@ -7,13 +7,10 @@ on:
     branches:
       - main
 jobs:
-  creating:
-    name: Creating file
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: Create Text File
-      run: |
-         touch demo.txt /home/kevin/app/document/
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
@@ -21,7 +18,8 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         password: ${{ secrets.SSH_PASSWORD }}
-
+        run: |
+          touch sample.txt /home/kevin/app/document/
        
         
              
