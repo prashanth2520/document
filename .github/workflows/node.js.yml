@@ -13,7 +13,7 @@ jobs:
     steps:
     - name: Create Text File
       run: |
-          touch sample.txt kevin app/document/
+          touch sample.txt app/document/
 
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
