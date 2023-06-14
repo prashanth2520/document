@@ -13,9 +13,7 @@ jobs:
     steps:
     - name: Create Text File
       run: |
-          touch app/document/sample.txt
-          chown kevin app/document/sample.txt
-
+          touch demo.txt 
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
