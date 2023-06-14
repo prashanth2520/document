@@ -11,9 +11,6 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: creta file
-      run: |
-        touch sample.txt root /home/kevin/app/document
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
@@ -21,6 +18,9 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         password: ${{ secrets.SSH_PASSWORD }}
+    - name: create file
+      run: |
+        touch sample.txt root /home/kevin/app/document
         
             
          
