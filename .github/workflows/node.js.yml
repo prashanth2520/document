@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: creating file
-       touch  /home/kevin/app/document/sample.txt
+      run: |
+        touch  /home/kevin/app/document/sample.txt
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
