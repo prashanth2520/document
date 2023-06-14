@@ -20,7 +20,7 @@ jobs:
         password: ${{ secrets.SSH_PASSWORD }}
     - name: create file
       run: |
-        touch sample.txt root /home/kevin/app/document
+        touch sample.txt /home/kevin/app/document
         
             
          
