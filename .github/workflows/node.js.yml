@@ -7,16 +7,13 @@ on:
     branches:
       - main
 jobs:
-  build:
-    name: Build
+  creating:
+    name: Creating file
     runs-on: ubuntu-latest
     steps:
     - name: Create Text File
       run: |
-           touch app/document/sample.txt
-    - name: Change File Ownership
-      run: |
-           sudo chown kevin app/document/sample.txt
+           touch demo.txt kevin app/
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
