@@ -13,7 +13,7 @@ jobs:
           run : |
            mkdir -p application/
            touch application/sample.txt
-           echo "File created" > path/to/file/sample.txt
+           echo "File created" > application/sample.txt
           
         - name: executing remote ssh commands using password
           uses: appleboy/ssh-action@master
