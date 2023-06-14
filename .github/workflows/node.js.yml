@@ -19,7 +19,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         password: ${{ secrets.SSH_PASSWORD }}
         script: 
-                npm install -g npm@latest
+                npm install -g npm@18.0.0
                 npm run build
              
         
