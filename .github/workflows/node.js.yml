@@ -18,8 +18,9 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         password: ${{ secrets.SSH_PASSWORD }}
-        run: npm install
-             npm run build
+        script: 
+                npm install
+                npm run build
              
         
         
