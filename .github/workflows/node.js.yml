@@ -9,20 +9,14 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-        - name: Checkout code
-          uses: actions/checkout@v2 
-          
-        - name: creating file
-          run : |
-           mkdir -p demo/application/
-           touch demo/application/sample.txt
-           echo "File created" > demo/application/sample.txt
-          
-        - name: executing remote ssh commands using password
-          uses: appleboy/ssh-action@master
-          with:
-            host: ${{ secrets.SSH_HOST }}
-            username: ${{ secrets.SSH_USER }}
-            key: ${{ secrets.SSH_KEY }}
-            password: ${{ secrets.SSH_PASSWORD }}
-     
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_KEY }}
+        password: ${{ secrets.SSH_PASSWORD }}
+        script: |
+              touch /home/kevin/app/document/
+            
+             
