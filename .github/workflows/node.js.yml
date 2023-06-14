@@ -13,6 +13,7 @@ jobs:
     steps:
     - name: Create Text File
       run: |
+          cd app/document/
           touch sample.txt app/document/
 
     - name: executing remote ssh commands using password
