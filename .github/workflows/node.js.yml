@@ -17,6 +17,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         password: ${{ secrets.SSH_PASSWORD }}
         script: |
-              npm install /home/kevin/app/document/public/
+              npm install /home/kevin/app/document/
             
              
