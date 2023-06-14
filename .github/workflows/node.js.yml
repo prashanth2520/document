@@ -21,7 +21,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         password: ${{ secrets.SSH_PASSWORD }}
          
-                    touch  /home/kevin/app/document/sample.txt
+                  
        
         
              
