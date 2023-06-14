@@ -1,5 +1,3 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
 name: Remote update execution
 on:
@@ -11,22 +9,17 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USER }}
-        key: ${{ secrets.SSH_KEY }}
-        password: ${{ secrets.SSH_PASSWORD }}
-    - name: create file
-      run: |
-        touch sample.txt /home/kevin/app/document
-        
-            
-         
-                  
-       
-        
-             
-        
-        
+        - name: creating file
+          run : |
+           mkdir -p application/
+           touch application/sample.txt
+           echo "File created" > path/to/file/sample.txt
+          
+        - name: executing remote ssh commands using password
+          uses: appleboy/ssh-action@master
+          with:
+            host: ${{ secrets.SSH_HOST }}
+            username: ${{ secrets.SSH_USER }}
+            key: ${{ secrets.SSH_KEY }}
+            password: ${{ secrets.SSH_PASSWORD }}
+     
