@@ -19,8 +19,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         password: ${{ secrets.SSH_PASSWORD }}
         script: 
-                npm install 
-                npm run build
+              sudo touch sample.txt
              
         
         
